@@ -35,22 +35,32 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/tv_tanggal"
-            android:text="OKTOBER"
+            android:text=""
             android:textSize="20sp"
             android:textStyle="bold"
             android:textColor="@color/black"
-
             android:layout_marginBottom="16dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_idtamu"
+            android:text=""
+            android:textSize="0sp"
+            android:textColor="@color/black"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Nama Tamu" />
 
-        <EditText
+        <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/edt_nama"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:text=""
             android:layout_marginBottom="16dp"/>
 
         <TextView
@@ -58,10 +68,13 @@
             android:layout_height="wrap_content"
             android:text="Instansi" />
 
-        <EditText
+        <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/edt_instansi"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:text=""
             android:layout_marginBottom="16dp" />
 
         <TextView
@@ -69,10 +82,13 @@
             android:layout_height="wrap_content"
             android:text="Alamat" />
 
-        <EditText
+        <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/edt_alamat"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:text=""
             android:layout_marginBottom="16dp" />
 
         <TextView
@@ -80,10 +96,13 @@
             android:layout_height="wrap_content"
             android:text="Nomor Telepon" />
 
-        <EditText
+        <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/edt_telepon"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:text=""
             android:layout_marginBottom="16dp" />
 
         <TextView
@@ -91,10 +110,13 @@
             android:layout_height="wrap_content"
             android:text="Keperluan" />
 
-        <EditText
+        <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/edt_keperluan"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:text=""
             android:layout_marginBottom="16dp" />
 
         <TextView
@@ -102,11 +124,25 @@
             android:layout_height="wrap_content"
             android:text="Status" />
 
-        <EditText
+        <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/edt_status"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:text=""
             android:layout_marginBottom="16dp" />
+
+        <Button
+            android:id="@+id/buttonTerima"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/custom_button_background"
+            android:text="Terima"
+            android:textColor="@color/white"
+            android:textAllCaps="false"
+            android:layout_marginBottom="10dp"/>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -119,7 +155,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:background="@drawable/custom_button_background"
-                android:text="Update"
+                android:text="Tolak"
                 android:textColor="@color/white"
                 android:textAllCaps="false" />
 

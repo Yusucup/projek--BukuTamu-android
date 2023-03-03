@@ -45,15 +45,17 @@ public class LihatTamuActivity extends AppCompatActivity implements AdapterView.
                     jsonObject.getJSONArray(Konfigurasi.TAG_JSON_ARRAY);
 
             for (int i = 0; i < result.length(); i++) {
-                JSONObject jo = result.getJSONObject(i);
-                String nama_tamu = jo.getString(Konfigurasi.TAG_NAMA);
-                String instansi = jo.getString(Konfigurasi.TAG_INSTANSI);
-                String alamat = jo.getString(Konfigurasi.TAG_ALAMAT);
-                String telepon = jo.getString(Konfigurasi.TAG_TELEPON);
-                String keperluan = jo.getString(Konfigurasi.TAG_KEPERLUAN);
-                String tanggal = jo.getString(Konfigurasi.TAG_TANGGAL);
-                String status = jo.getString(Konfigurasi.TAG_STATUS);
+                JSONObject jo       = result.getJSONObject(i);
+                String id_tamu      = jo.getString(Konfigurasi.TAG_IDTAMU);
+                String nama_tamu    = jo.getString(Konfigurasi.TAG_NAMA);
+                String instansi     = jo.getString(Konfigurasi.TAG_INSTANSI);
+                String alamat       = jo.getString(Konfigurasi.TAG_ALAMAT);
+                String telepon      = jo.getString(Konfigurasi.TAG_TELEPON);
+                String keperluan    = jo.getString(Konfigurasi.TAG_KEPERLUAN);
+                String tanggal      = jo.getString(Konfigurasi.TAG_TANGGAL);
+                String status       = jo.getString(Konfigurasi.TAG_STATUS);
                 HashMap<String, String> lihatdatasuhu = new HashMap<>();
+                lihatdatasuhu.put(Konfigurasi.TAG_IDTAMU, id_tamu);
                 lihatdatasuhu.put(Konfigurasi.TAG_NAMA, nama_tamu);
                 lihatdatasuhu.put(Konfigurasi.TAG_INSTANSI, instansi);
                 lihatdatasuhu.put(Konfigurasi.TAG_ALAMAT, alamat);
@@ -70,20 +72,26 @@ public class LihatTamuActivity extends AppCompatActivity implements AdapterView.
 
         ListAdapter adapter = new SimpleAdapter(
                 LihatTamuActivity.this, list, R.layout.list_item,
-                new String[]{Konfigurasi.TAG_NAMA,
+                new String[]{
+                        Konfigurasi.TAG_IDTAMU,
+                        Konfigurasi.TAG_NAMA,
                         Konfigurasi.TAG_INSTANSI,
                         Konfigurasi.TAG_ALAMAT,
                         Konfigurasi.TAG_TELEPON,
                         Konfigurasi.TAG_KEPERLUAN,
                         Konfigurasi.TAG_TANGGAL,
-                        Konfigurasi.TAG_STATUS},
-                new int[]{R.id.tv_item_nama,
+                        Konfigurasi.TAG_STATUS
+                },
+                new int[]{
+                        R.id.tv_item_id,
+                        R.id.tv_item_nama,
                         R.id.tv_item_instansi,
                         R.id.tv_item_alamat,
                         R.id.tv_item_telepon,
                         R.id.tv_item_keperluan,
                         R.id.tv_item_tanggal,
-                        R.id.tv_item_status});
+                        R.id.tv_item_status
+                });
 
         listView.setAdapter(adapter);
     }
@@ -123,7 +131,7 @@ public class LihatTamuActivity extends AppCompatActivity implements AdapterView.
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
         Intent intent = new Intent(this, TampilTamuActivity.class);
         HashMap <String, String> map = (HashMap) parent.getItemAtPosition(position);
-        String id_tamu = map.get(Konfigurasi.TAG_IDTAMU);
+        String id_tamu = map.get(Konfigurasi.TAG_IDTAMU).toString();
         intent.putExtra(Konfigurasi.KEY_IDTAMU, id_tamu);
         startActivity(intent);
         finish();

@@ -7,7 +7,7 @@ public class Konfigurasi {
     public static final String URL_SHOW_TAMU="http://192.168.122.41:8080/android_bukutamu/data/tamulihatdata.php";
     public static final String URL_ADD_TAMU="http://192.168.122.41:8080/android_bukutamu/data/tamutambah.php";
 
-    public static final String URL_EDIT_TAMU ="http://192.168.122.41:8080/android_bukutamu/data/tampiltamu.php?id_tamu=";
+    public static final String URL_GET_TAMU ="http://192.168.122.41:8080/android_bukutamu/data/tampiltamu.php?id_tamu=";
     public static final String URL_UPDATE_TAMU ="http://192.168.122.41:8080/android_bukutamu/data/updatetamu.php";
     public static final String URL_DELETE_TAMU ="http://192.168.122.41:8080/android_bukutamu/data/hapustamu.php?id_tamu=";
 
@@ -26,7 +26,7 @@ public class Konfigurasi {
     public static final String KEY_PASSWORD     = "password";
 
     //JSON Tags
-    public static final String TAG_JSON_ARRAY="result";
+    public static final String TAG_JSON_ARRAY   = "result";
     public static final String TAG_IDTAMU       = "id_tamu";
     public static final String TAG_NAMA         = "nama_tamu";
     public static final String TAG_INSTANSI     = "instansi";
